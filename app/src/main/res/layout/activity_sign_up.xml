@@ -40,7 +40,7 @@
 
             android:id="@+id/edtName"
             android:hint="Name"
-            android:text="Fauzi Faruq"
+            android:text="Fauzi Faruq Nabbani"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
             android:textSize="30sp"
