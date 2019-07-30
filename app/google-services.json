@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "498308912002",
+    "firebase_url": "https://raos-cc93f.firebaseio.com",
+    "project_id": "raos-cc93f",
+    "storage_bucket": "raos-cc93f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498308912002:android:5d7de7700abf2b2f",
+        "android_client_info": {
+          "package_name": "com.fauzi.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498308912002-lei2f6jj3b5dbf8olu0bu0j8fn3k7hqd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fauzi.myapplication",
+            "certificate_hash": "76af88d063ca621cd91223d68c27f05d839fb7ba"
+          }
+        },
+        {
+          "client_id": "498308912002-3imub9pl7sf5egbooi3oj4b33huiemji.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAz112LEsRik9Pdom25BTFzT_y5rhKV_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498308912002-3imub9pl7sf5egbooi3oj4b33huiemji.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

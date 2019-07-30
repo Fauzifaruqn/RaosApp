@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:src="@drawable/logoraos" />
+        <TextView
+            android:gravity="center"
+            android:id="@+id/txtSlogan"
+            android:textColor="@android:color/white"
+            android:text="@string/slogan"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+
+            android:id="@+id/btnSignIn"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_weight="1"
+            android:background="@color/btnSignActive"
+            android:text="Sign In"
+            android:textColor="@android:color/black" />
+
+        <Button
+
+            android:id="@+id/btnSignUp"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_marginBottom="50dp"
+
+            android:layout_weight="1"
+            android:background="@color/btnSignActive"
+            android:text="Sign Up"
+            android:textColor="@android:color/black" />
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
