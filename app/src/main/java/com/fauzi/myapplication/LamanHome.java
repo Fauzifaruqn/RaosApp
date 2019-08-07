@@ -1,5 +1,6 @@
 package com.fauzi.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.fauzi.myapplication.Common.Common;
@@ -48,6 +49,8 @@ public class LamanHome extends AppCompatActivity
     RecyclerView recyler_menu;
     RecyclerView.LayoutManager layoutManager;
 
+    FirebaseRecyclerAdapter<Category, MenuViewHolder> adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,10 +61,6 @@ public class LamanHome extends AppCompatActivity
         // Init Firebase
         database = FirebaseDatabase.getInstance();
         category = database.getReference("Category");
-
-
-
-
 
 
 
@@ -104,7 +103,7 @@ public class LamanHome extends AppCompatActivity
                         .setQuery(category, Category.class)
                         .setLifecycleOwner(this)
                         .build();
-        FirebaseRecyclerAdapter<Category, MenuViewHolder> adapter = new FirebaseRecyclerAdapter<Category, MenuViewHolder>(options) {
+        adapter = new FirebaseRecyclerAdapter<Category, MenuViewHolder>(options) {
 
             @NonNull
             @Override
@@ -122,7 +121,13 @@ public class LamanHome extends AppCompatActivity
                 menuViewHolder.setItemClickListerner(new ItemClickListerner() {
                     @Override
                     public void onClik(View view, int position, boolean isLongClick) {
-                        Toast.makeText(LamanHome.this, ""+clickItem.getName(), Toast.LENGTH_SHORT).show();
+                        //Get CategoryID and send to noew Activity
+                        Intent foodList = new Intent(LamanHome.this,FoodList.class);
+
+                        //Because CategoryId is key, so we just get key of this
+                        foodList.putExtra("CategoryId",adapter.getRef(position).getKey());
+
+                        startActivity(foodList);
                     }
                 });
             }
