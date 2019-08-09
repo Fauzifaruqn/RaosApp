@@ -49,4 +49,8 @@ dependencies {
     implementation 'com.cepheuen.elegant-number-button:lib:1.0.2'
     implementation 'com.google.android.material:material:1.1.0-alpha09'
 
+//    Part 5 for Cart and Submit Order
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:2.0.1'
+
 }

@@ -68,8 +68,8 @@ public class LamanHome extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent cartIntent = new Intent(LamanHome.this,Cart.class);
+                startActivity(cartIntent);
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

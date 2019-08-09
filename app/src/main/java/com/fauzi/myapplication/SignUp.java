@@ -51,6 +51,7 @@ public class SignUp extends AppCompatActivity {
                         if(dataSnapshot.child(edtPhone.getText().toString()).exists())
                         {
                             mDialog.dismiss();
+
                             Toast.makeText(SignUp.this, "Phone Number already Register", Toast.LENGTH_SHORT).show();
                         }
                         else
