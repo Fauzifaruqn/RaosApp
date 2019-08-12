@@ -4,60 +4,71 @@ import java.util.List;
 
 public class Request {
 
-    private String phone;
-    private String address;
-    private String name;
-    private String total;
+    private String Name;
+    private String Phone;
+    private String Address;
+    private String Total;
+    private String Status;
+
     private List<Order> foods; //List of  food order
 
-    public Request() {
-    }
+    public Request(){}
 
-    public Request(String phone, String address, String name, String total, List<Order> foods) {
-        this.phone = phone;
-        this.address = address;
-        this.name = name;
-        this.total = total;
+
+    public Request(String name, String phone, String address, String total, List<Order> orders) {
+        Name = name;
+        Phone = phone;
+        Address = address;
+        Total = total;
+        Status = "0";
         this.foods = foods;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
     }
 
     public String getName() {
-        return name;
+        return Name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        Name = name;
+    }
+
+    public String getPhone() {
+        return Phone;
+    }
+
+    public void setPhone(String phone) {
+        Phone = phone;
+    }
+
+    public String getAddress() {
+        return Address;
+    }
+
+    public void setAddress(String address) {
+        Address = address;
     }
 
     public String getTotal() {
-        return total;
+        return Total;
     }
 
     public void setTotal(String total) {
-        this.total = total;
+        Total = total;
     }
 
-    public List<Order> getFoods() {
+    public List<Order> getOrders() {
         return foods;
     }
 
-    public void setFoods(List<Order> foods) {
-        this.foods = foods;
+    public void setOrders(List<Order> orders) {
+        this.foods = orders;
+    }
+
+    public String getStatus() {
+        return Status;
+    }
+
+    public void setStatus(String status) {
+        Status = status;
     }
 }

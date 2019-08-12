@@ -79,14 +79,14 @@ public class Cart extends AppCompatActivity {
 
     private void showAlertDialog() {
 
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(Cart.this);
+        final AlertDialog.Builder alertDialog = new AlertDialog.Builder(Cart.this);
         alertDialog.setTitle("One More Step!");
         alertDialog.setMessage("Enter Your Address: ");
 
         final EditText edtAddress = new EditText(Cart.this);
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.MATCH_PARENT
+                LinearLayout.LayoutParams.WRAP_CONTENT
         );
 
         edtAddress.setLayoutParams(lp);
@@ -96,9 +96,8 @@ public class Cart extends AppCompatActivity {
         alertDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Request request = new Request(
+                Request request = new Request(Common.currentUser.getName(),
                         Common.currentUser.getPhone(),
-                        Common.currentUser.getName(),
                         edtAddress.getText().toString(),
                         txtTotalPrice.getText().toString(),
                         cart
@@ -109,7 +108,7 @@ public class Cart extends AppCompatActivity {
                         .setValue(request);
 
                 //Delete Chart
-                new Database(getBaseContext()).cleanCart();
+                new Database(Cart.this).cleanCart();
                 Toast.makeText(Cart.this, "Thank you , Order Place ", Toast.LENGTH_SHORT).show();
                 finish();
             }

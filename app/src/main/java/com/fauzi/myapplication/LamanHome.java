@@ -178,10 +178,18 @@ public class LamanHome extends AppCompatActivity
         if (id == R.id.nav_menu) {
             // Handle the camera action
         } else if (id == R.id.nav_orders) {
+            Intent orderIntent = new Intent(LamanHome.this,OrderStatus.class);
+            startActivity(orderIntent);
 
         } else if (id == R.id.nav_cart) {
+            Intent cartIntent = new Intent(LamanHome.this,Cart.class);
+            startActivity(cartIntent);
 
         } else if (id == R.id.nav_logout) {
+            Intent signIn = new Intent(LamanHome.this,SignIn.class);
+            signIn.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(signIn);
+
 
         }
 
